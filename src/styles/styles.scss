@@ -1,0 +1,101 @@
+@import "_var";
+@import "_reset";
+.block_title {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: url(../../assets/images/main_bg_01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    padding-top: 50px;
+    .item_logo {
+        background: rgb(0, 0, 0);
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        font-family: 'Corinthia', serif;
+        color: rgb(255, 255, 255);
+        display: flex;
+        p {
+            margin: auto;
+            font-size: 7em;
+        }
+    }
+    .item_typing-title {
+        @include margin(40px, 0px);
+        .mast__title {
+            margin: 0px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 1);
+            letter-spacing: 5px;
+            font-size: 2.7em;
+            font-weight: 400;
+            text-align: center;
+            span {
+                animation: letter-glow 0.9s 0s ease both;
+                @include nth-ani-delay(25, 0.2s);
+            }
+        }
+        .mast__title-fadeIn {
+            text-align: center;
+            margin: 0px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 1);
+            letter-spacing: 5px;
+            font-size: 2.7em;
+            font-weight: 600;
+            animation: letter-glow 2s 6s cubic-bezier(.1, .7, 1, 1) both;
+        }
+    }
+    .item_line-for-login {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        right: 0px;
+        left: 0px;
+        bottom: -100px;
+        .item_login {
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-content: center;
+            display: flex;
+            width: 20%;
+            height: 240px;
+            background: rgb(255, 255, 255);
+            border: 1px groove #807f7f6b;
+            box-shadow: 0px 1px 2px #807f7f6b;
+            button {
+                align-self: center;
+                text-transform: uppercase;
+                width: 60%;
+            }
+            input {
+                align-self: center;
+                width: 80%;
+            }
+        }
+    }
+}
+
+@keyframes letter-glow {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1)
+    }
+    66% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9)
+    }
+    77% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0)
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "qw_test",
+    "version": "1.0.0",
+    "description": "for blockchaintalk",
+    "main": "webpack.config.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --mode development",
+        "test": "karma start karma.conf.js --log-level debug"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ZazzizzuzA/Qw.git"
+    },
+    "author": "Michael P",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ZazzizzuzA/Qw/issues"
+    },
+    "homepage": "https://github.com/ZazzizzuzA/Qw#readme",
+    "dependencies": {
+        "copy-webpack-plugin": "^4.5.1",
+        "css-loader": "^0.28.11",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.1.0",
+        "jquery": "^3.3.1",
+        "node-sass": "^4.8.3",
+        "npm": "^5.8.0",
+        "pug": "^2.0.3",
+        "pug-loader": "^2.3.0",
+        "sass-loader": "^6.0.7",
+        "style-loader": "^0.20.3",
+        "sw-precache-webpack-plugin": "^0.11.5",
+        "url-loader": "^1.0.1",
+        "vue": "^2.5.16",
+        "vue-loader": "^14.2.2",
+        "vue-template-compiler": "^2.5.16",
+        "webpack": "^4.2.0",
+        "webpack-cli": "^2.0.13"
+    }
+}
