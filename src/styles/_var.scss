@@ -15,3 +15,20 @@ $first_white: rgb(183, 221, 248);
         }
     }
 }
+
+@function shadow-string($color1, $length) {
+    $total-length: $length;
+    $string: $color1 0px 0px;
+    @while $length>0 {
+        $mix-amount: 100 - (($length / $total-length) * 100);
+        $mixed-color: mix($color1, $mix-amount);
+        $string-addition: $length+px $length+px;
+        $string: $mixed-color $string-addition, $string;
+        $length: $length - 1;
+    }
+    @return $string
+}
+
+@mixin longshadow($color1, $length) {
+    text-shadow: shadow-string($color1, $length);
+}
