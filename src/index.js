@@ -1,5 +1,6 @@
 import "./styles/styles";
 import Vue from "vue";
+import Vivus from "vivus";
 
 (function($) {
     var s,
@@ -21,3 +22,12 @@ import Vue from "vue";
         };
     spanizeLetters.init();
 })(jQuery);
+
+// let container = document.getElementById('containerLogotype');
+let svgAnim = new Vivus('logotype', {
+    type: "oneByOne",
+    duration: 400,
+    start: 'autostart',
+}, () => {
+    document.getElementById('paths').setAttribute("fill", "white");
+})
