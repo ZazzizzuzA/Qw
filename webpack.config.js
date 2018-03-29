@@ -1,7 +1,6 @@
 const path = require("path"),
     webpack = require("webpack"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    // SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin"),
     CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -11,7 +10,6 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
-        // publicPath: (__dirname, "dist/")
     },
     resolve: {
         extensions: [".js", ".json", ".scss", ".css"],
@@ -61,12 +59,7 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
         }),
-        // new SWPrecacheWebpackPlugin({
-        //     cacheId: "me-watch-" + Math.random(),
-        //     filename: "service-worker.js",
-        //     staticFileGlobs: ["dist/*.{js,html,css}"],
-        //     stripPrefix: "dist/"
-        // }),
+
         new CopyWebpackPlugin([{ from: 'assets/**/*' }]),
     ]
 }
