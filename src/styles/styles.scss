@@ -152,9 +152,9 @@ body {
         left: 0%;
         z-index: -1;
         width: 150%;
-        height: 75%;
+        height: 200%;
         background-color: rgb(48, 131, 85);
-        transform: rotate(-24deg);
+        transform: rotate(-17deg);
         transform-origin: 0 0;
     }
     .item_sec1:after {
@@ -165,22 +165,21 @@ body {
         left: 0%;
         z-index: -1;
         width: 150%;
-        height: 95%;
+        height: 200%;
         background: inherit;
-        transform: rotate(-15deg);
+        transform: rotate(-9deg);
         transform-origin: 0 0;
     }
     .item_sec2 {
         display: flex;
-        height: 100vh;
         flex-flow: column nowrap;
         align-items: center;
         background-color: rgb(95, 193, 139);
-        @include padding(60px, 28%);
-        padding-bottom: 150px;
+        @include padding(0px, 25%);
+        padding-bottom: 20%;
         position: relative;
         font-size: 0.8em;
-        clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
         z-index: 3;
         p {
             line-height: 25px;
@@ -312,3 +311,5 @@ g {
         transform: rotate(0deg) scale(1.1);
     }
 }
+
+@import "_adaptive";
